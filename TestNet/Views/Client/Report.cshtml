@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TestNet.Models.ClientViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+    <title>Clientes</title>
+</head>
+<body>
+    <h2>Clientes</h2>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.first_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.second_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.second_surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dpi)
+            </th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.first_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.second_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.second_surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dpi)
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
