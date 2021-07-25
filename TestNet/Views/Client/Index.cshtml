@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TestNet.Models.ClientViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.second_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.second_surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dpi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.second_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.second_surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dpi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
