@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using TestNet.Data;
 using TestNet.Models;
@@ -72,6 +71,7 @@ namespace TestNet.Controllers
         [Authorize]
         // POST: Client/Create
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(ClientViewModel client)
         {
             try

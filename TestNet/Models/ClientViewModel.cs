@@ -11,20 +11,21 @@ namespace TestNet.Models
         public int id { get; set; }
 
         [Display(Name="Primer Nombre")]
-        [Required(ErrorMessage ="El primer nombre es obligatorio.")]
+        [Required(ErrorMessage ="El campo {0} es obligatorio.")]
         public string first_name { get; set; }
 
         [Display(Name = "Segundo Nombre")]
         public string second_name { get; set; }
 
         [Display(Name = "Primer Apellido")]
-        [Required(ErrorMessage = "El primer apellido es obligatorio.")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
         public string surname { get; set; }
 
         [Display(Name = "Segundo Apellido")]
         public string second_surname { get; set; }
 
         [Display(Name = "DPI")]
+        [Required(ErrorMessage = "El DPI es obligatorio.")]
         public long dpi { get; set; }
     }
 }
